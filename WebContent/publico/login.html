@@ -3,12 +3,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
+
+<script type="text/javascript">
+
+function processarContext() {
+	   var context = "/" + window.location.pathname.split('/')[1] + '/j_spring_security_check';
+	   document.getElementById("formulario").action = context;;
+}
+
+</script>
+
 </head>
 <body>
 	<div align="center" style="padding-top: 100px;">
 	
-		<form id="formulario" method="post" name="formulario"
-			action="/angularjs_spring_mvc/j_spring_security_check">
+		<form id="formulario" method="post" name="formulario" onsubmit="processarContext()">
 
 			<label>Login</label>
 			<input type="text" name="j_username" id="j_username" />

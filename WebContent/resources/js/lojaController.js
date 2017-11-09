@@ -28,7 +28,8 @@ app.controller("lojaController", function($scope, $http, $location, $routeParams
 
 		$scope.pedidoObjeto.cliente = $scope.clienteAdiconado;
 		
-		$http.post("pedido/finalizar", {"pedido" : $scope.pedidoObjeto, "itens" : $scope.itensCarrinho}).success(function(response) {
+		$http.post("pedido/finalizar", {"pedido" : $scope.pedidoObjeto,
+			"itens" : $scope.itensCarrinho}).success(function(response) {
 			$scope.pedidoObjeto = {};
 			$scope.itensCarrinho = {};
 			

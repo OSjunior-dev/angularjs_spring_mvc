@@ -1,7 +1,9 @@
 package curso.angular.controller;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -66,6 +68,8 @@ public class PedidoController extends DaoImplementacao<Pedido> implements
 				PedidoBean.class);
 
 		Pedido pedido = pedidoBean.getPedido();
+		
+		pedido.setData(Calendar.getInstance().getTime());
 
 		pedido = super.merge(pedido);
 

@@ -27,7 +27,7 @@ public class Pedido {
 	
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date data = Calendar.getInstance().getTime();
+	private Date data;
 	
 	
 	public void setData(Date data) {
